@@ -161,7 +161,10 @@ img { display: block; max-width: 100%; }
   margin: 0 auto 24px;
 }
 .hero__highlight {
-  color: var(--accent);
+  background: linear-gradient(135deg, #00d4ff, #7b2ff7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .hero__subtitle {
   font-size: clamp(0.85rem, 2vw, 1rem);
@@ -247,6 +250,60 @@ img { display: block; max-width: 100%; }
   font-size: 0.8rem;
   margin-bottom: 20px;
   line-height: 1.6;
+}
+
+/* ===== Game Card Actions ===== */
+.game-card__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ===== Trailer Modal ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.modal--open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+}
+.modal__container {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+}
+.modal__close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s;
+}
+.modal__close:hover {
+  color: var(--text-muted);
+}
+.modal__video {
+  display: block;
+  width: 100%;
+  background: #000;
 }
 
 /* ===== CTA ===== */

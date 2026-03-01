@@ -20,7 +20,7 @@
   <header class="header" id="header">
     <nav class="header__nav container">
       <a href="/" class="header__logo">
-        <img src="https://images.squarespace-cdn.com/content/v1/65e9d95a50aec126869293ed/5c95e7d9-2591-4352-9a79-29d7430783c4/full-white-transparent.png?format=300w" alt="SpyreIO" class="header__logo-img">
+        <img src="assets/images/spyre.png" alt="SpyreIO" class="header__logo-img">
       </a>
       <button class="header__hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span>
@@ -40,7 +40,7 @@
       <h1 class="hero__title">
         browser games for <span class="hero__highlight">CASUAL PLAYERS</span>
       </h1>
-      <p class="hero__subtitle">Free-to-play games you can jump into from any browser.</p>
+      <p class="hero__subtitle">Free-to-play games you can jump into from anywhere.</p>
       <a href="#games" class="btn btn--primary btn--lg">See Our Games</a>
     </div>
   </section>
@@ -61,7 +61,10 @@
           <div class="game-card__body">
             <h3 class="game-card__title">Hangman Clash</h3>
             <p class="game-card__desc">Multiplayer hangman. Race against opponents to solve the word first in real-time matches.</p>
-            <a href="https://hangmanclash.com" target="_blank" rel="noopener" class="btn btn--primary">Play Now</a>
+            <div class="game-card__actions">
+              <a href="https://hangmanclash.com" target="_blank" rel="noopener" class="btn btn--primary">Play Now</a>
+              <button class="btn btn--outline" id="trailer-btn">Watch Trailer</button>
+            </div>
           </div>
         </article>
 
@@ -138,6 +141,17 @@
       </div>
     </div>
   </footer>
+
+  <!-- Trailer Modal -->
+  <div class="modal" id="trailer-modal">
+    <div class="modal__backdrop"></div>
+    <div class="modal__container">
+      <button class="modal__close" aria-label="Close trailer">&times;</button>
+      <video class="modal__video" controls preload="metadata">
+        <source src="assets/hangman-trailer.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
